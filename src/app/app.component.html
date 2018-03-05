@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side">
+        <app-sidebar></app-sidebar>
+    </mat-sidenav>
+<div class="site">
+    <header>
+        <app-header (toggle)="sidenav.toggle()"></app-header>
+    </header>
+    <main>
+        <!-- sidenav -->
+        <!-- <button (click)="sidenav.toggle()">Sidebar</button> -->
+    </main>
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</div>
+</mat-sidenav-container>
