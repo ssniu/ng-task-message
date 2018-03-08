@@ -1,18 +1,34 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<mat-sidenav-container>
-    <mat-sidenav #sidenav mode="side">
+<mat-sidenav-container [class.myapp-dark-theme]="darkTheme">
+    <mat-sidenav #sidenav mode="over">
+        <!-- <mat-sidenav #sidenav mode="side"> -->
         <app-sidebar></app-sidebar>
     </mat-sidenav>
 <div class="site">
     <header>
-        <app-header (toggle)="sidenav.toggle()"></app-header>
+        <app-header (toggle)="sidenav.toggle()" (toggleTheme)="switchTheme($event)"></app-header>
     </header>
     <main>
         <!-- sidenav -->
         <!-- <button (click)="sidenav.toggle()">Sidebar</button> -->
+        <router-outlet></router-outlet>
     </main>
     <footer>
         <app-footer></app-footer>
     </footer>
 </div>
 </mat-sidenav-container>
+<!--<mat-card>
+   <mat-card-header>
+       <mat-card-title>Login: </mat-card-title>
+   </mat-card-header>
+   <mat-card-content>
+       <mat-input-container color="accent">
+           <input matInput type="text" placeholder="email">
+       </mat-input-container>
+   </mat-card-content>
+   <mat-card-actions>
+       <p>Don't have an account?<a href="">Sign up</a></p>
+       <p>Forgot password<a href="">Find</a></p>
+   </mat-card-actions>
+</mat-card>-->
