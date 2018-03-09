@@ -17,6 +17,7 @@ import { LoginModule } from './login/login.module';
 //import { ProjectRoutingModule } from './project/project-routing.module';
 import { ProjectModule } from './project/project.module';
 import { LoginComponent } from './login/login/login.component';
+import { TaskModule} from './task/task.module';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { LoginComponent } from './login/login/login.component';
     SharedModule,
     LoginModule,
     ProjectModule,
+    TaskModule,
     AppRoutingModule
     //LoginComponent
   ],

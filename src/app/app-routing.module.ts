@@ -10,12 +10,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 const routes: Routes =[
     //{ path: '', redirectTo: '/login', pathMatch: 'full' },
     //{ path: 'login', component: LoginComponent },
-    { path: 'project', redirectTo: '/project',pathMatch: 'full' },
     {
-         path: '',
-    redirectTo: '/login',
-    pathMatch: 'full'
-},
+        path: '',
+        redirectTo: '/login',
+        pathMatch: 'full'
+    },
+    { path: 'project', redirectTo: '/project',pathMatch: 'full' },
+    { path: 'tasklist', redirectTo: '/tasklists',pathMatch: 'full' },
+
 { path: '**', component: PageNotFoundComponent }
 
 ];

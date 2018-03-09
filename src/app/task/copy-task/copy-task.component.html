@@ -1,0 +1,12 @@
+<form>
+    <h3 mat-dialog-title>Move task</h3>
+    <div mat-dialog-content>
+        <mat-select placeholder="please select list">
+            <mat-option *ngFor="let list of lists">{{list.name}}</mat-option>
+        </mat-select>
+    </div>
+    <div mat-dialog-actions>
+        <button type="button" mat-raised-button color="primary">Save</button>
+        <button type="button" mat-button mat-dialog-close>Close</button>
+    </div>
+</form>

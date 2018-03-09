@@ -9,6 +9,7 @@ import {OverlayModule} from '@angular/cdk/overlay';
   styleUrls: ['./new-project.component.scss']
 })
 export class NewProjectComponent implements OnInit {
+    title= '';
 
   constructor(private dialogRef: MatDialogRef<NewProjectComponent>,
       @Inject(MAT_DIALOG_DATA) public data
@@ -16,6 +17,7 @@ export class NewProjectComponent implements OnInit {
    ) { }
 
   ngOnInit() {
+      this.title = this.data.title;
       console.log(JSON.stringify(this.data));
   }
 

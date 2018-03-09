@@ -11,6 +11,14 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { MatDialogModule } from '@angular/material';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatNativeDateModule} from '@angular/material';
+import {MatSelectModule} from '@angular/material/select';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   imports: [
@@ -24,9 +32,17 @@ import { MatDialogModule } from '@angular/material';
     MatSlideToggleModule,
     MatGridListModule,
     MatAutocompleteModule,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule,
+    MatCheckboxModule,
+    MatTooltipModule,
+    MatDatepickerModule,
+    MatRadioModule,
+    MatNativeDateModule,
+    MatSelectModule
+
   ],
-  declarations: [],
+  declarations: [ConfirmDialogComponent],
   exports: [
       CommonModule,
       MatToolbarModule,
@@ -38,7 +54,17 @@ import { MatDialogModule } from '@angular/material';
       MatSlideToggleModule,
       MatGridListModule,
       MatAutocompleteModule,
-      MatDialogModule
+      MatDialogModule,
+      MatMenuModule,
+      MatCheckboxModule,
+      MatTooltipModule,
+      MatDatepickerModule,
+      MatRadioModule,
+      MatNativeDateModule,
+      MatSelectModule
+  ],
+  entryComponents: [
+      ConfirmDialogComponent
   ]
 })
 export class SharedModule { }
