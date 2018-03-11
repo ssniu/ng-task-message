@@ -1,11 +1,11 @@
 <mat-list>
     <h3 mat-subheader>Project</h3>
-    <mat-list-item>
-        <span mat-line>Home of project</span>
+    <mat-list-item [routerLink]="['/project']" (click)="onNavClick()">
+        <span mat-line >Home of project</span>
         <span mat-line mat-subheader>all projects</span>
     </mat-list-item>
     <h3 mat-subheader>Calender</h3>
-    <mat-list-item>
+    <mat-list-item [routerLink]="['/tasklists']">
         <span>Home of calender</span>
     </mat-list-item>
     <mat-list-item>

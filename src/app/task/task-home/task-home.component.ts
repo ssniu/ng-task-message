@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import {MatDialog} from '@angular/material';
 import { MatDialogModule } from '@angular/material';
 import { NewTaskComponent} from '../new-task/new-task.component';
 import { CopyTaskComponent} from '../copy-task/copy-task.component';
 import { ConfirmDialogComponent}from '../../shared/confirm-dialog/confirm-dialog.component';
 import { NewTaskListComponent} from '../new-task-list/new-task-list.component';
+import { slideToRight } from '../../anims/router.anim';
 
 @Component({
   selector: 'app-task-home',
   templateUrl: './task-home.component.html',
-  styleUrls: ['./task-home.component.scss']
+  styleUrls: ['./task-home.component.scss'],
+  animations: [slideToRight],
 })
 export class TaskHomeComponent implements OnInit {
 
@@ -104,6 +106,21 @@ lists = [
       const dialogRef = this.dialog.open(NewTaskListComponent, {data: {title: 'new list:',
            content:'confirm to delete this task'}});
       dialogRef.afterClosed().subscribe(result => console.log(result));
+  }
+
+  handleMove(srcData, list){
+      switch(srcData.tag){
+          case 'task-item':
+              console.log('hangling item');
+              console.log(srcData.tag);
+              break;
+          case 'task-list':
+              console.log('hangling list');
+               console.log(srcData.tag);
+              break;
+          default:
+              break;
+      }
   }
 
 }

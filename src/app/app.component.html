@@ -2,7 +2,7 @@
 <mat-sidenav-container [class.myapp-dark-theme]="darkTheme">
     <mat-sidenav #sidenav mode="over">
         <!-- <mat-sidenav #sidenav mode="side"> -->
-        <app-sidebar></app-sidebar>
+        <app-sidebar (navClick)="sidenav.toggle()"></app-sidebar>
     </mat-sidenav>
 <div class="site">
     <header>
@@ -12,6 +12,7 @@
         <!-- sidenav -->
         <!-- <button (click)="sidenav.toggle()">Sidebar</button> -->
         <router-outlet></router-outlet>
+        <!-- <div class="square" [@square]="squareState" (click)="onClick()"></div>-->
     </main>
     <footer>
         <app-footer></app-footer>

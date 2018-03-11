@@ -14,11 +14,11 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
-
+import { AppRoutingModule } from '../app-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import 'rxjs/add/operator/take';
 
 //import {loadSvgResources} from '../utils/svg.util';
-
 
 @NgModule({
   imports: [
@@ -26,7 +26,8 @@ import { SharedModule } from '../shared/shared.module';
     //MatToolbarModule,
     HttpModule,
     SharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
     //MatIconRegistry,
 
     //MatIconModule,
@@ -36,13 +37,15 @@ import { SharedModule } from '../shared/shared.module';
     //CommonModule,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
-
+    SidebarComponent,
+    AppRoutingModule
   ],
   declarations: [
       HeaderComponent,
       FooterComponent,
       SidebarComponent
+  ],
+  providers: [
 
   ]
 })

@@ -1,0 +1,16 @@
+.card {
+    float: left;
+    margin-left: 20px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.fab-button {
+    //float: right;
+    position: fixed;
+    right: 32px;
+    bottom: 96px;
+    z-index: 998;
+}
